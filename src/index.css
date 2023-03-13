@@ -1,13 +1,91 @@
-body {
+:root{
+  --working-color: #ef5d50;
+  --resting-color: #1c6606;
+  --text-color: #fff
+}
+*{
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  padding: 0;
+  outline: none;
+  box-sizing: border-box;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+body{
+  font-family: sans-serif monospace;
+  background: var(--resting-color);
+  transition: background-color 500ms ease-out;
+  line-height: 1.5;
 }
+
+.App{
+  max-width: 640px;
+  margin: 0 auto
+}
+
+.working{
+  background: var(--working-color);
+}
+
+.hidden{
+  display: none;
+}
+
+.pomodoro{
+  margin: 50px 20px;
+  padding: 20px;
+  background-color: rgba(255,255,255,0.4);
+  border-radius: 4px;
+  box-shadow: 0 0 10px rgba(0,0,0,.5);
+  color:var(--text-color)
+}
+
+.pomodoro h2{
+  font-size: 24px;
+  font-weight: 900;
+  text-align: center;
+}
+
+.pomodoro .timer{
+  font-size: 6rem;
+  text-align: center;
+}
+
+
+.pomodoro .controls{
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+.pomodoro button {
+  background: #FFF;
+  border-radius: 7px;
+  border: none;
+  cursor: pointer;
+  padding: 12px 25px;
+  color: var(--resting-color);
+  font-weight: 900;
+  font-size: 18px;
+  letter-spacing: 1px;
+  transition: background-color 500ms ease-in-out;
+  margin: 20px auto;
+
+}
+
+.working .pomodoro button {
+  color: var(--working-color);
+}
+
+.working .pomodoro .details{
+  background-color: var(--working-color);
+}
+.pomodoro .details{
+  margin: 20px 000;
+  background-color: var(--resting-color);
+  padding: 20px;
+  border-radius: 7px;
+}
+
+.pomodoro .details p {
+  margin-bottom: 10px;
+}
+
